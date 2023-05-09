@@ -34,7 +34,7 @@ typedef struct stack
                            // are in the stack.
     unsigned int capacity; // Stores the maximum size of our stack
     node_t *head;          // head points to a node on the top of our stack.
-} stack_t;
+} neu_stack;
 
 
 /**  Creates a stack
@@ -43,10 +43,10 @@ typedef struct stack
 * (Think about what the means in terms of memory allocation)
 * The stacks fields should also be initialized to default values.
 */
-stack_t *create_stack(unsigned int capacity)
+neu_stack *create_stack(unsigned int capacity)
 {
     // Modify the body of this function as needed.
-    stack_t *myStack = NULL;
+    neu_stack *myStack = NULL;
     // TODO: Implement me!!
 
     return myStack;
@@ -57,7 +57,7 @@ stack_t *create_stack(unsigned int capacity)
 * Returns 1 if true (The stack is completely empty)
 * Returns 0 if false (the stack has at least one element enqueued)
 */
-int stack_empty(stack_t *s)
+int stack_empty(neu_stack *s)
 {
     // TODO: Implement me!!
 
@@ -68,7 +68,7 @@ int stack_empty(stack_t *s)
 * Returns 1 if true (The Stack is completely full, i.e. equal to capacity)
 * Returns 0 if false (the Stack has more space available to enqueue items)
 **/
-int stack_full(stack_t *s)
+int stack_full(neu_stack *s)
 {
     // TODO: Implement me!
 
@@ -80,7 +80,7 @@ int stack_full(stack_t *s)
 * Returns a -1 if the operation fails (otherwise returns 0 on success).
 *    -> if the Stack is full that is an error, but does not crash the program.
 **/
-int stack_enqueue(stack_t *s, int item)
+int stack_enqueue(neu_stack *s, int item)
 {
     // TODO: Implement me!
 
@@ -96,7 +96,7 @@ int stack_enqueue(stack_t *s, int item)
      fputs("no items to dequeue!\n", stderr);
      return EXIT_FAILURE
 **/
-int stack_dequeue(stack_t *s)
+int stack_dequeue(neu_stack *s)
 {
     // TODO: Implement me!
 
@@ -108,7 +108,7 @@ int stack_dequeue(stack_t *s)
  * stack hasn't been properly recreated, print to stderr, 
  * and return -1 
 */
-unsigned int stack_size(stack_t *s)
+unsigned int stack_size(neu_stack *s)
 {
     // TODO: Implement me!
 
@@ -120,7 +120,7 @@ unsigned int stack_size(stack_t *s)
  *  This should be called before any program terminates.
  *  Simple ignores if an invalid stack is passed to it.
  **/
-void free_stack(stack_t *s)
+void free_stack(neu_stack *s)
 {
     // TODO: Implement me!
 }
