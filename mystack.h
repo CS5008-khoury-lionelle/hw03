@@ -76,10 +76,11 @@ int stack_full(neu_stack *s)
 }
 
 /** Enqueue a new item
-* i.e. push a new item into our data structure
-* Returns a -1 if the operation fails (otherwise returns 0 on success).
-*    -> if the Stack is full that is an error, but does not crash the program.
-**/
+ * i.e. push a new item into our data structure
+ * Returns a -1 if the operation fails due to memory error
+ * Returns a 0 if the operation fails due to the stack being full (no more capacity)
+ * Returns a 1 if the operation is successful
+ **/
 int stack_enqueue(neu_stack *s, int item)
 {
     // TODO: Implement me!
